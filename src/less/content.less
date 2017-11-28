@@ -1,0 +1,41 @@
+.content {
+    display: flex;
+    justify-content: center;
+    background-color: @main-color-5;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 581px;
+    }
+}
+
+.sell {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        color: @text-color-5;
+        .mixin(Arial, 16px, normal);
+    }
+
+    &__number {
+        display: flex;
+        flex-flow: row;
+    }
+
+    &__info {
+        color: @text-color-5;
+        .mixin(Arial, 16px, normal);
+    }
+
+    &__content {
+        color: @text-color-6;
+        .mixin(Arial, 16px, normal);
+    }
+
+    &__price {
+        display: flex;
+        flex-flow: row;
+    }
+}

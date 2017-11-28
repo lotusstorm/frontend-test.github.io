@@ -1,0 +1,8 @@
+.mixin(@family, @weight: normal, @style: normal) {
+    @font-face {
+        font-family: @family;
+        src: url('../fonts/@{family}.ttf');
+        font-weight: @weight;
+        font-style: @style;
+    }
+}
