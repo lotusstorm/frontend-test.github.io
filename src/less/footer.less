@@ -1,0 +1,23 @@
+.footer {
+    display: flex;
+    background-color: @main-color-7;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 565px;
+        margin: 26px 0 33px 29px;
+    }
+
+    &__content {
+        line-height: 1.5;
+        text-align: left;
+        color: @text-color-7;
+        .mixin(Arial, 12px, 500);
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

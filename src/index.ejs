@@ -34,13 +34,15 @@
                 <div class="content__wrapper">
                     <div class="sell">
                         <p class="sell__title">Информация по оплате:</p>
-                        <div class="sell__number">
-                            <p class="sell__info">Номер счета:</p>
-                            <p class="sell__content">87123658716587</p>
-                        </div>
-                        <div class="sell__price">
-                            <p class="sell__info">Сумма платежа:</p>
-                            <p class="sell__content">100 руб.</p>
+                        <div class="sell__wrapper">
+                            <div class="sell__block">
+                                <p class="sell__info">Номер счета:</p>
+                                <p class="sell__info">Сумма платежа:</p>
+                            </div>
+                            <div class="sell__block">
+                                <p class="sell__content">87123658716587</p>
+                                <p class="sell__content">100 руб.</p>
+                            </div>
                         </div>
                     </div>
                     <form action="" class="card-details">
@@ -50,38 +52,53 @@
                                 <div class="card-number">
                                     <p class="card-number__info">Номер карты</p>
                                     <div class="card-number__wrapper">
-                                        <input class="card-number__block" type="text">
-                                        <input class="card-number__block" type="text">
-                                        <input class="card-number__block" type="text">
-                                        <input class="card-number__block" type="text">
+                                        <input class="card-number__block" type="text" required name="card-number" maxlength="4" autocomplete="off">
+                                        <input class="card-number__block" type="text" required name="card-number" maxlength="4" autocomplete="off">
+                                        <input class="card-number__block" type="text" required name="card-number" maxlength="4" autocomplete="off">
+                                        <input class="card-number__block" type="text" required name="card-number" maxlength="4" autocomplete="off">
                                     </div>
                                 </div>
                                 <div class="date">
-                                    <p class="data__info">Срок действия</p>
+                                    <p class="date__info">Срок действия</p>
                                     <div class="date__wrapper">
-                                        <input class="data__month" type="text">
-                                        <input class="data__year" type="text">
+                                        <select name="month" id="date__month" class="date__month">
+                                        <%for(let i = 1; i < 13; i++) {%>
+                                            <%let a = (Array(2).join('0') + i).slice(-2)%>
+                                            <option class="date__content" value="<%= a%>"><%= a%></option>
+                                        <%}%>
+                                        </select>
+                                        <select name="year" id="date__year" class="date__year">
+                                            <%for(let i = 0; i < 10; i++) {%>
+                                                <%let today = new Date().getFullYear();%>
+                                                <option class="date__content" value="<%= today + i%>"><%= today + i%></option>
+                                            <%}%>
+                                        </select>
                                     </div>
                                 </div>
-                                <input class="user" type="" name="">
+                                <input class="user" type="" name="" placeholder="Держатель карты" autocomplete="off" required>
                             </div>
                             <div class="card-back">
                                 <div class="card-back__decor"></div>
                                 <div class="verification">
                                     <p class="verification__info">Код CVV2 / CVC2</p>
-                                    <input class="verification__code" type="text" name="card code">
+                                    <input class="verification__code" type="text" name="verification__code" autocomplete="off" required>
+                                    <div class="verification__block">
+                                        <img class="verification__description" src="img/description.png" alt="Описание" title="3 цифры на обратной стороне карты">
+                                    </div>
                                 </div>
                             </div>
-                            <button class="pay-button">Оплатить</button>
                         </div>
-                    </div>
-                </form>
+                        <input type="submit" class="pay-button" value="Оплатить" name="pay-button">
+                    </form>
+                </div>
             </div>
             <div class="footer">
-                <p class="footer__content">Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.</p>
-                <p class="footer__content">Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.</p>
-                <p class="footer__content">Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.</p>
-                <p class="footer__content">Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.</p>
+                <div class="footer__wrapper">
+                    <p class="footer__content">Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.</p>
+                    <p class="footer__content">Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.</p>
+                    <p class="footer__content">Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.</p>
+                    <p class="footer__content">Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.</p>
+                </div>
             </div>
         </div>
     </div>
