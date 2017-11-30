@@ -1,5 +1,6 @@
 .header {
     display: flex;
+    justify-content: center;
     height: 163px;
     background-color: @main-color-6;
     align-items: center;
@@ -7,20 +8,26 @@
     &__wrapper {
         display: flex;
         flex-direction: column;
-        max-width: 435px;
-        margin-left: 30px;
+        width: 92%;
     }
 
     &__title {
         color: @main-color-3;
-        .mixin(OpenSans-Bold, 35px, bold);
+        .mixin(OpenSans-Bold, 45px, bold);
         margin-bottom: 12px;
+        @media @large {
+            .mixin(OpenSans-Bold, 35px, bold);
+        }
     }
 
     &__content {
         color: @main-color-3;
-        .mixin(Arial, 14px, regular);
+        .mixin(Arial, 24px, regular);
         line-height: 1.43;
+        width: 70%;
+        @media @large {
+            .mixin(Arial, 14px, regular);
+        }
     }
 }
 
