@@ -7,6 +7,7 @@
 </head>
 <body>
     <div class="wrapper">
+        <!-- начало блока меню -->
         <div class="menu">
             <div class="menu__wrapper">
                 <div class="menu__logo">
@@ -23,15 +24,21 @@
                 </ul>
             </div>
         </div>
+        <!-- конец блока меню -->
+        <!-- начало блока основная страница -->
         <div class="page">
+            <!-- начало блока Заголовок страницы -->
             <div class="header">
                 <div class="header__wrapper">
                     <h1 class="header__title">Заголовок страницы</h1>
                     <p class="header__content">В отличие от пылевого и ионного хвостов, направление поступает в лимногляциальный часовой угол</p>
                 </div>
             </div>
+            <!-- конец блока Заголовок страницы -->
+            <!-- начало блока content -->
             <div class="content">
                 <div class="content__wrapper">
+                    <!-- начало блока Информация по оплате -->
                     <div class="sell">
                         <p class="sell__title">Информация по оплате:</p>
                         <div class="sell__wrapper">
@@ -45,29 +52,33 @@
                             </div>
                         </div>
                     </div>
-                    <form action="" class="card-details">
+                    <!-- конец блока Информация по оплате -->
+                    <!-- начало блока Данные банковской карты -->
+                    <form action="" class="card-details" id="card-details">
                         <h1 class="card-details__info">Данные банковской карты</h1>
                         <div class="card-details__wrapper">
+                            <!-- начало блока Перед карты -->
                             <div class="card-front">
                                 <div class="card-number">
                                     <p class="card-number__info">Номер карты</p>
                                     <div class="card-number__wrapper">
-                                        <input class="card-number__block" type="text" required name="card-number" maxlength="4" autocomplete="off">
-                                        <input class="card-number__block" type="text" required name="card-number" maxlength="4" autocomplete="off">
-                                        <input class="card-number__block" type="text" required name="card-number" maxlength="4" autocomplete="off">
-                                        <input class="card-number__block" type="text" required name="card-number" maxlength="4" autocomplete="off">
+                                        <input class="card-number__block" type="text" data-ruls="required number" name="card-number" maxlength="4" autocomplete="off">
+                                        <input class="card-number__block" type="text" data-ruls="required number" name="card-number" maxlength="4" autocomplete="off">
+                                        <input class="card-number__block" type="text" data-ruls="required number" name="card-number" maxlength="4" autocomplete="off">
+                                        <input class="card-number__block" type="text" data-ruls="required number" name="card-number" maxlength="4" autocomplete="off">
                                     </div>
                                 </div>
+                                <!-- начало блока Срок действия -->
                                 <div class="date">
                                     <p class="date__info">Срок действия</p>
                                     <div class="date__wrapper">
-                                        <select name="month" id="date__month" class="date__month">
+                                        <select name="month" class="date__month" data-ruls="required">
                                         <%for(let i = 1; i < 13; i++) {%>
                                             <%let a = (Array(2).join('0') + i).slice(-2)%>
                                             <option class="date__content" value="<%= a%>"><%= a%></option>
                                         <%}%>
                                         </select>
-                                        <select name="year" id="date__year" class="date__year">
+                                        <select name="year" class="date__year" data-ruls="required">
                                             <%for(let i = 0; i < 10; i++) {%>
                                                 <%let today = new Date().getFullYear();%>
                                                 <option class="date__content" value="<%= today + i%>"><%= today + i%></option>
@@ -75,23 +86,30 @@
                                         </select>
                                     </div>
                                 </div>
-                                <input class="user" type="" name="" placeholder="Держатель карты" autocomplete="off" required>
+                                <!-- конец блока Срок действия -->
+                                <input class="user" type="text" name="user" placeholder="Держатель карты" autocomplete="off" data-ruls="required user">
                             </div>
+                            <!-- конец блока Перед карты -->
+                            <!-- начало блока Оборот карты -->
                             <div class="card-back">
                                 <div class="card-back__decor"></div>
                                 <div class="verification">
                                     <p class="verification__info">Код CVV2 / CVC2</p>
-                                    <input class="verification__code" type="text" name="verification__code" autocomplete="off" required>
+                                    <input class="verification__code" type="text" name="verification__code" autocomplete="off" data-ruls="required code" maxlength="3">
                                     <div class="verification__block">
                                         <img class="verification__description" src="img/description.png" alt="Описание" title="3 цифры на обратной стороне карты">
                                     </div>
                                 </div>
                             </div>
+                            <!-- конец блока Оборот карты -->
                         </div>
-                        <input type="submit" class="pay-button" value="Оплатить" name="pay-button">
+                        <button class="pay-button" name="pay-button">Оплатить</button>
                     </form>
+                    <!-- конец блока Данные банковской карты -->
                 </div>
             </div>
+            <!-- конец блока content -->
+            <!-- начало блока footer -->
             <div class="footer">
                 <div class="footer__wrapper">
                     <p class="footer__content">Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.</p>
@@ -100,7 +118,9 @@
                     <p class="footer__content">Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.</p>
                 </div>
             </div>
+            <!-- конец блока footer -->
         </div>
+        <!-- конец блока основной страницы -->
     </div>
     <script src="js/main.js"></script>
 </body>
