@@ -1,9 +1,12 @@
 .header {
     display: flex;
     justify-content: center;
-    height: 163px;
-    background-color: @main-color-6;
     align-items: center;
+    height: 263px;
+    background-color: @main-color-6;
+    @media @large {
+        height: 163px;
+    }
 
     &__wrapper {
         display: flex;

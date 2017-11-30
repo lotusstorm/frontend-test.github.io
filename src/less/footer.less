@@ -14,8 +14,11 @@
         line-height: 1.5;
         text-align: left;
         color: @text-color-7;
-        .mixin(Arial, 12px, 500);
+        .mixin(Arial, 22px, 500);
         margin-bottom: 10px;
+        @media @large {
+            .mixin(Arial, 12px, 500);
+        }
 
         &:last-child {
             margin-bottom: 0;

@@ -20,7 +20,7 @@
 
     &__title {
         color: @text-color-5;
-        .mixin(Arial, 30px, 500);
+        .mixin(Arial, 36px, 500);
         margin-bottom: 23px;
         @media @large {
             .mixin(Arial, 16px, 500);
@@ -44,8 +44,11 @@
 
     &__info {
         color: @text-color-5;
-        .mixin(Arial, 16px, 500);
+        .mixin(Arial, 26px, 500);
         margin-bottom: 11px;
+        @media @large {
+            .mixin(Arial, 16px, 500);
+        }
 
         &:last-child {
             margin-bottom: 0;
@@ -54,8 +57,11 @@
 
     &__content {
         color: @text-color-6;
-        .mixin(Arial, 16px, 500);
+        .mixin(Arial, 26px, 500);
         margin-bottom: 14px;
+        @media @large {
+            .mixin(Arial, 16px, 500);
+        }
 
         &:last-child {
             margin-bottom: 0;
@@ -71,16 +77,22 @@
 
     &__info {
         color: @text-color-4;
-        .mixin(OpenSans-Bold, 22px, bold);
-        margin-bottom: 22px;
+        .mixin(OpenSans-Bold, 42px, bold);
+        margin-bottom: 30px;
+        @media @large {
+            margin-bottom: 22px;
+            .mixin(OpenSans-Bold, 22px, bold);
+        }
     }
 
     &__wrapper {
         display: flex;
         flex-flow: row wrap;
-        position: relative;
-        height: 259px;
         margin-bottom: 15px;
+        @media @large {
+            position: relative;
+            height: 259px;
+        }
     }
 }
 
@@ -88,13 +100,18 @@
 .card-front {
     display: flex;
     flex-direction: column;
-    height: 236px;
-    width: 350px;
+    height: 336px;
+    width: 560px;
     border-radius: 10px;
-    border: solid 1px @main-color-8;
+    border: solid 2px @main-color-8;
     background-color: @main-color-5;
-    z-index: 2;
-    // position: absolute;
+    margin-bottom: 15px;
+    @media @large {
+        z-index: 2;
+        height: 236px;
+        width: 350px;
+        border: solid 1px @main-color-8;
+    }
 }
 
 // блок "Номер карты"
@@ -105,8 +122,12 @@
 
     &__info {
         color: @text-color-5;
-        .mixin(Arial, 16px, 500);
-        margin-bottom: 5px;
+        .mixin(Arial, 26px, 500);
+        margin-bottom: 10px;
+        @media @large {
+            margin-bottom: 5px;
+            .mixin(Arial, 16px, 500);
+        }
     }
 
     &__wrapper {
@@ -115,14 +136,20 @@
     }
 
     &__block {
-        width: 65px;
-        height: 42px;
+        width: 100px;
+        height: 57px;
         background-color: @main-color-9;
         border: solid 1px @main-color-8;
-        margin-right: 9px;
+        margin-right: 19px;
         text-align: center;
         color: @text-color-6;
-        .mixin(Arial, 18px, bold);
+        .mixin(Arial, 28px, bold);
+        @media @large {
+            .mixin(Arial, 18px, bold);
+            margin-right: 9px;
+            width: 65px;
+            height: 42px;
+        }
 
         &:last-child {
             margin-right: 0;
@@ -138,8 +165,12 @@
 
     &__info {
         color: @text-color-5;
-        .mixin(Arial, 16px, 500);
-        margin-bottom: 5px;
+        .mixin(Arial, 26px, 500);
+        margin-bottom: 10px;
+        @media @large {
+            margin-bottom: 5px;
+            .mixin(Arial, 16px, 500);
+        }
     }
 
     &__wrapper {
@@ -151,13 +182,18 @@
         appearance: none;
         background-image: url(../img/arrow.png);
         background-repeat: no-repeat;
-        height: 42px;
-        width: 70px;
+        height: 52px;
+        width: 90px;
         background-position: 90% 50%;
         padding-left: 15px;
         color: @text-color-6;
-        .mixin(Arial, 16px, bold);
+        .mixin(Arial, 26px, bold);
         border: solid 1px @main-color-8;
+        @media @large {
+            .mixin(Arial, 16px, bold);
+            height: 42px;
+            width: 70px;
+        }
     }
 
     &__year {
@@ -165,13 +201,18 @@
         background-image: url(../img/arrow.png);
         background-repeat: no-repeat;
         background-position: 90% 50%;
-        height: 42px;
-        width: 86px;
+        height: 52px;
+        width: 116px;
         margin-left: 9px;
         padding-left: 15px;
         color: @text-color-6;
-        .mixin(Arial, 16px, bold);
+        .mixin(Arial, 26px, bold);
         border: solid 1px @main-color-8;
+        @media @large {
+            .mixin(Arial, 16px, bold);
+            height: 42px;
+            width: 86px;
+        }
     }
 
     &__content {
@@ -183,18 +224,26 @@
 
 // блок "Держатель карты"
 .user {
-    width: 302px;
-    height: 42px;
+    width: 452px;
+    height: 62px;
     background-color: @main-color-9;
     border: solid 1px @main-color-8;
     margin-left: 15px;
     color: @text-color-6;
     padding-left: 15px;
-    .mixin(Arial, 20px, 500);
+    .mixin(Arial, 30px, 500);
+    @media @large {
+        width: 302px;
+        height: 42px;
+        .mixin(Arial, 20px, 500);
+    }
 
     &::placeholder {
         color: @text-color-8;
-        .mixin(Arial, 16px, 500);
+        .mixin(Arial, 26px, 500);
+        @media @large {
+            .mixin(Arial, 16px, 500);
+        }
     }
 }
 
@@ -203,21 +252,31 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    height: 236px;
-    width: 350px;
+    height: 336px;
+    width: 560px;
+    border: solid 2px @main-color-8;
     border-radius: 10px;
-    border: solid 1px @main-color-8;
     background-color: @main-color-5;
-    position: absolute;
-    z-index: 1;
+    position: static;
     top: 20px;
     left: 197px;
+    @media @large {
+        z-index: 1;
+        position: absolute;
+        height: 236px;
+        width: 350px;
+        border: solid 1px @main-color-8;
+    }
 
     &__decor {
         width: 100%;
-        height: 42px;
+        height: 62px;
         background-color: @main-color-8;
-        margin: 26px 0 19px;
+        margin: 36px 0 25px;
+        @media @large {
+            margin: 26px 0 19px;
+            height: 42px;
+        }
     }
 }
 
@@ -226,21 +285,30 @@
     display: flex;
     flex-direction: column;
     margin-right: 15px;
+    position: relative;
 
     &__info {
         color: @text-color-8;
-        .mixin(Arial, 16px, 500);
+        .mixin(Arial, 26px, 500);
         margin-bottom: 4px;
+        @media @large {
+            .mixin(Arial, 16px, 500);
+        }
     }
 
     &__code {
-        width: 123px;
-        height: 42px;
+        width: 190px;
+        height: 60px;
         border: solid 1px @main-color-8;
         background-color: @main-color-9;
         padding-left: 15px;
         color: @text-color-6;
-        .mixin(Arial, 20px, 600);
+        .mixin(Arial, 30px, 600);
+        @media @large {
+            .mixin(Arial, 20px, 600);
+            width: 123px;
+            height: 42px;
+        }
     }
 
     &__block {
@@ -248,11 +316,17 @@
         justify-content: center;
         align-items: center;
         position: absolute;
-        height: 40px;
-        width: 40px;
-        top: 46%;
-        left: 83%;
+        height: 70px;
+        width: 70px;
+        top: 30%;
+        left: 63%;
         border-radius: 5px;
+        @media @large {
+            height: 40px;
+            width: 40px;
+            top: 35%;
+            left: 69%;
+        }
 
         &:hover {
             background-color: @main-color-5;
@@ -260,21 +334,30 @@
     }
 
     &__description {
-        height: 26px;
-        width: 26px;
+        height: 46px;
+        width: 46px;
+        @media @large {
+            height: 26px;
+            width: 26px;
+        }
     }
 }
 
 // блок "Кнопка покупки"
 .pay-button {
-    width: 173px;
-    height: 40px;
+    width: 233px;
+    height: 50px;
     border-radius: 5px;
     background: linear-gradient(to top, #98bf0c, #b4de22);
     background-blend-mode: overlay, normal;
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .02);
     color: @text-color-3;
-    .mixin(OpenSans-Bold, 14px, 600);
+    .mixin(OpenSans-Bold, 24px, 600);
     border: none;
     cursor: pointer;
+    @media @large {
+        width: 173px;
+        height: 40px;
+        .mixin(OpenSans-Bold, 14px, 600);
+    }
 }
