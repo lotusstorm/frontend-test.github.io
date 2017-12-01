@@ -6,7 +6,7 @@ menuButton.addEventListener('click', (event) => {
     const menuStyle = menu.style;
     const ev = event.target;
 
-    if(ev.className == 'menu-button_invisible') {
+    if(!ev.checked) {
         menuWrapper.style.left = '0';
         menuStyle.zIndex = '4';
         menuStyle.width = '100%';
@@ -14,7 +14,7 @@ menuButton.addEventListener('click', (event) => {
 
         ev.classList.remove('menu-button_invisible');
         ev.classList.add('menu-button_visible');
-    }else if(ev.className == 'menu-button_visible') {
+    }else {
         menuWrapper.style.left = '-50%';
         menuStyle.zIndex = '0';
         menuStyle.width = '0';
