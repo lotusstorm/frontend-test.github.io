@@ -15,9 +15,6 @@ const data         = require('./src/data');
 
 const isProdaction = process.env.NODE_ENV == 'prodaction';
 
-// Автоперезагрузка при изменении файлов в папке `dist`:
-// Принцип: меняем файлы в `/src`, они обрабатываются и переносятся в `dist` и срабатывает автоперезагрузка.
-// Это таск нужен только при локальной разработке.
 gulp.task('livereload', () => {
     browserSync.create();
 
@@ -68,7 +65,6 @@ gulp.task('fonts', () => {
         .pipe(gulp.dest('./dist/fonts'));
 });
 
-// Отслеживание изменений в файлах, нужно только при локальной разработке
 gulp.task('watch', () => {
     gulp.watch('src/less/*.less', ['styles']);
     gulp.watch('src/**/*.ejs', ['html']);
