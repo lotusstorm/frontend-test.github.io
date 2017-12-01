@@ -7,5 +7,5 @@
 ```
 
 Проект будет доступен по адресу `http://localhost:3000`.
-Проект будет доступен по адресу 
+Проект будет доступен по адресу https://lotusstorm.github.io/frontend-test.github.io/
 
